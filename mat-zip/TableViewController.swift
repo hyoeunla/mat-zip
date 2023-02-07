@@ -7,14 +7,15 @@
 
 import UIKit
 
-var items = ["맛집1", "맛집2", "맛집3"]
-var itemsImageFile = ["jap.png", "korean.png", "chi.png"]
+var name = ["인덕대학교 푸드코트", "민들레초밥", "하다식당", "피자굽는 오빠", "밥은화"]
+var itemsImageFile = ["duk.png", "min.jpeg", "2.png", "pi.png", "bap.png"]
+var itemsDetail = ["학식당", "초밥집", "돈까스 전문점", "이탈리아 음식", "덮밥"]
 class TableViewController: UITableViewController {
+    
     @IBOutlet var tvListView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -32,15 +33,17 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return items.count
+        return name.count
     }
 
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        
-        cell.textLabel?.text = items[indexPath.row]
-        cell.imageView?.image = UIImage(named: itemsImageFile[indexPath.row])
+        let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
+        let text: String = name[indexPath.row]
+        let ex: String = itemsDetail[indexPath.row]
+        cell.myName?.text = text
+        cell.myEx?.text = ex
+        cell.myImg.image = UIImage(named: itemsImageFile[indexPath.row])
         // Configure the cell...
 
         return cell
@@ -86,13 +89,40 @@ class TableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "sgDetail" {
-            let cell = sender as! UITableViewCell
-            let indexPath = self.tvListView.indexPath(for: cell)
-            let detailView = segue.destination as! DetailViewController
-            detailView.receiveItem(items[(indexPath?.row)!])
+            if segue.identifier == "sgDetail" {
+                let cell = sender as! UITableViewCell
+                let indexPath = self.tvListView.indexPath(for: cell)
+                let detailView = segue.destination as! DetailViewController
+                detailView.receiveName(name[(indexPath?.row)!])
+                detailView.receiveImg(itemsImageFile[(indexPath?.row)!])
+            }
         }
-    }
-  
-
 }
+
+
+/*
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if segue.identifier == "sgDetail" {
+             let cell = sender as! UITableViewCell
+             let indexPath = self.tvListView.indexPath(for: cell)
+             let detailView = segue.destination as! DetailViewController
+             detailView.receiveName(name[(indexPath?.row)!])
+         }
+         }
+     }
+ 
+ 
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if segue.identifier == "mySegue"{
+             if let destination = segue.destination as?
+                 nextViewController {
+                 if let selectdeIndex =
+                     self.tableView.indexPathForSelectedRow?.row {
+                         
+                         destination.prepareImage = img[selectdeIndex]
+                         destination.prepareLabel = label[selectdeIndex]
+                 }
+             }
+         }
+     }
+ */

@@ -14,9 +14,8 @@
 		9E5DAE4D2991522C009734B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DAE4B2991522C009734B2 /* LaunchScreen.storyboard */; };
 		9E5DAE7129915AFE009734B2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DAE7029915AFE009734B2 /* TableViewController.swift */; };
 		9E5DAE7329915CB6009734B2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DAE7229915CB6009734B2 /* DetailViewController.swift */; };
-		9E5DAE77299168CE009734B2 /* jap.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DAE74299168CE009734B2 /* jap.png */; };
-		9E5DAE78299168CE009734B2 /* korean.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DAE75299168CE009734B2 /* korean.png */; };
-		9E5DAE79299168CE009734B2 /* chi.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5DAE76299168CE009734B2 /* chi.png */; };
+		9E5DAE7F29922B6B009734B2 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DAE7E29922B6B009734B2 /* CustomTableViewCell.swift */; };
+		9E5DAE81299262FD009734B2 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DAE80299262FD009734B2 /* MenuTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +47,8 @@
 		9E5DAE5D2991522C009734B2 /* mat-zipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mat-zipUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E5DAE7029915AFE009734B2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9E5DAE7229915CB6009734B2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		9E5DAE74299168CE009734B2 /* jap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jap.png; sourceTree = "<group>"; };
-		9E5DAE75299168CE009734B2 /* korean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = korean.png; sourceTree = "<group>"; };
-		9E5DAE76299168CE009734B2 /* chi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chi.png; sourceTree = "<group>"; };
+		9E5DAE7E29922B6B009734B2 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		9E5DAE80299262FD009734B2 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +101,9 @@
 				9E5DAE7029915AFE009734B2 /* TableViewController.swift */,
 				9E5DAE402991522B009734B2 /* AppDelegate.swift */,
 				9E5DAE422991522B009734B2 /* SceneDelegate.swift */,
+				9E5DAE80299262FD009734B2 /* MenuTableViewCell.swift */,
+				9E5DAE7E29922B6B009734B2 /* CustomTableViewCell.swift */,
 				9E5DAE462991522B009734B2 /* Main.storyboard */,
-				9E5DAE74299168CE009734B2 /* jap.png */,
-				9E5DAE75299168CE009734B2 /* korean.png */,
-				9E5DAE76299168CE009734B2 /* chi.png */,
 				9E5DAE492991522C009734B2 /* Assets.xcassets */,
 				9E5DAE4B2991522C009734B2 /* LaunchScreen.storyboard */,
 				9E5DAE4E2991522C009734B2 /* Info.plist */,
@@ -218,10 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E5DAE79299168CE009734B2 /* chi.png in Resources */,
 				9E5DAE4D2991522C009734B2 /* LaunchScreen.storyboard in Resources */,
-				9E5DAE77299168CE009734B2 /* jap.png in Resources */,
-				9E5DAE78299168CE009734B2 /* korean.png in Resources */,
 				9E5DAE4A2991522C009734B2 /* Assets.xcassets in Resources */,
 				9E5DAE482991522B009734B2 /* Main.storyboard in Resources */,
 			);
@@ -249,6 +243,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E5DAE412991522B009734B2 /* AppDelegate.swift in Sources */,
+				9E5DAE7F29922B6B009734B2 /* CustomTableViewCell.swift in Sources */,
+				9E5DAE81299262FD009734B2 /* MenuTableViewCell.swift in Sources */,
 				9E5DAE7129915AFE009734B2 /* TableViewController.swift in Sources */,
 				9E5DAE432991522B009734B2 /* SceneDelegate.swift in Sources */,
 				9E5DAE7329915CB6009734B2 /* DetailViewController.swift in Sources */,
